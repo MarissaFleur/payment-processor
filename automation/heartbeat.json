@@ -1,0 +1,29 @@
+{
+  "serviceName": "payment-processor",
+  "status": "healthy",
+  "timestamp": "2024-10-27T10:00:00Z",
+  "version": "1.2.3",
+  "dependencies": {
+    "database": {
+      "status": "healthy",
+      "responseTimeMs": 15
+    },
+    "messageQueue": {
+      "status": "healthy",
+      "responseTimeMs": 5
+    },
+    "authService": {
+      "status": "healthy",
+      "responseTimeMs": 20
+    }
+  },
+  "metrics": {
+    "requestsPerSecond": 120,
+    "averageResponseTimeMs": 80,
+    "errorRate": 0.01
+  },
+  "alerts": [
+    {"type": "warning", "message": "High latency detected", "severity": "medium", "resolved": false}
+  ],
+  "environment": "production"
+}
